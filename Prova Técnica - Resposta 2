@@ -1,0 +1,23 @@
+#Linguagem Python
+
+# Função para calcular a sequência de Fibonacci e verificar se um número pertence à sequência
+def verifica_fibonacci(num):
+    # Sequência de Fibonacci inicial
+    fib_seq = [0, 1]
+    
+    # Gerando a sequência até que o último número seja maior ou igual ao número informado
+    while fib_seq[-1] < num:
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])
+    
+    # Verificando se o número informado está na sequência de Fibonacci
+    if num in fib_seq:
+        return f"O número {num} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {num} não pertence à sequência de Fibonacci."
+
+# Definindo o número a ser verificado
+numero_informado = 21  # Pode ser alterado
+
+# Verificando se o número pertence à sequência de Fibonacci
+resultado = verifica_fibonacci(numero_informado)
+print(resultado)
