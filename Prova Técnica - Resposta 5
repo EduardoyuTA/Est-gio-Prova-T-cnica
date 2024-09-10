@@ -1,0 +1,24 @@
+# Linguagem Python
+
+def inverter_string(s):
+    # Converte a string para uma lista para facilitar a manipulação dos caracteres
+    lista_chars = list(s)
+    # Inicializa as variáveis de início e fim
+    inicio = 0
+    fim = len(lista_chars) - 1
+
+    # Enquanto o índice de início for menor que o índice de fim
+    while inicio < fim:
+        # Troca os caracteres nas posições de início e fim
+        lista_chars[inicio], lista_chars[fim] = lista_chars[fim], lista_chars[inicio]
+        # Move os índices para o centro
+        inicio += 1
+        fim -= 1
+
+    # Converte a lista de volta para uma string
+    return ''.join(lista_chars)
+
+# Teste do programa
+entrada = input("Digite a string que deseja inverter: ")
+resultado = inverter_string(entrada)
+print("String invertida:", resultado)
